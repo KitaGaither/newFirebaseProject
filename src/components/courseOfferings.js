@@ -23,20 +23,19 @@ class CourseOfferings extends Component {
     render() {
     return (
       <div className="courseOfferings">
-        <h3>Bootcamp Courses</h3>
+        <h1>Bootcamp Courses</h1>
         {
           this.state.bootcamps &&
           this.state.bootcamps.map( bootcamp => {
             return (
               <div>
-                <h5>Course</h5>
-                <p>{bootcamp.name}</p>
+                <h5>{bootcamp.name}</h5>
 
                 <p>{bootcamp.description}</p>
 
 
                 <p>Length of course: {bootcamp.length}</p>
-                <p>Price of course: {bootcamp.cost}</p>
+                <p>Price of course: {bootcamp.price}</p>
               </div>
             )
           })
