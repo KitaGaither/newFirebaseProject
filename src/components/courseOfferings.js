@@ -36,6 +36,9 @@ class CourseOfferings extends Component {
 
                 <p>Length of course: {bootcamp.length}</p>
                 <p>Price of course: {bootcamp.price}</p>
+
+                
+
               </div>
             )
           })
