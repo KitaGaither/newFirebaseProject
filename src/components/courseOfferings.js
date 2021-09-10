@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { db, auth } from '../config/firebase';
+import { db } from '../components/bootcamps/config/firebase';
 
+
+const bootcamps = [
+  {name: 'bootstrap'} //change this back to bootstrap
+]
 class CourseOfferings extends Component {
   state = { 
     bootcamps: null
@@ -29,13 +33,16 @@ class CourseOfferings extends Component {
           this.state.bootcamps.map( bootcamp => {
             return (
               <div>
-                <h5>{bootcamp.name}</h5>
-
+                <p>{bootcamp.indexOf[3]}</p>
+                {/* <p>{bootcamp.id}</p>
+                <p>{bootcamp.name}</p>
+                <p>b{bootcamp.description}</p>
+                <p>{bootcamp.length}</p>
                 <p>{bootcamp.description}</p>
 
 
                 <p>Length of course: {bootcamp.length}</p>
-                <p>Price of course: {bootcamp.price}</p>
+                <p>Price of course: {bootcamp.price}</p> */}
 
                 
 

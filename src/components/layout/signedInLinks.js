@@ -5,12 +5,13 @@ import { NavLink } from 'react-router-dom';
 const SignedInLinks = () => {
     return (
         <ul className="right">
+            
             <li>
-                <NavLink to='/'>Bootcamp List</NavLink>
+                <NavLink to='/bootcampdetails'>Bootcamp Details</NavLink>
             </li>
 
             <li>
-                <NavLink to='/'>Bootcamp Details</NavLink>
+                <NavLink to='/bootcamplist'>Bootcamp List</NavLink>
             </li>
 
             <li>
