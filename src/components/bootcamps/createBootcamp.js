@@ -21,7 +21,7 @@ class CreateBootcamp extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="gray-text text-darken-3">HelloS</h5>
+                    <h5 className="gray-text text-darken-3">Create a new Bootcamp!</h5>
 
                     <div className="input-field">
                         <label htmlFor="input-field"></label>

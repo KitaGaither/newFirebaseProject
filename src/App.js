@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/layout/navbar';
 import Dashboard from './components/dashboard/dashboard';
-import BootcampDetails from './components/bootcamps/bootcampDetails';
-import BootcampList from './components/bootcamps/bootcampList';
+import CurrentBootcamps from './components/bootcamps/currentBootcamps';
 import CreateBootcamp from './components/bootcamps/createBootcamp';
 
 class App extends Component {
@@ -14,8 +13,7 @@ class App extends Component {
               <Navbar />
               <Switch>
                 <Route exact path='/' component={Dashboard} />
-                <Route path='/bootcamp/:id' component={BootcampList} />
-                <Route path='/bootcamp/:id' component={BootcampDetails} />
+                <Route path='/currentbootcamps/:id' component={CurrentBootcamps} />
                 <Route path='/create' component={CreateBootcamp} />
               </Switch>
             </div>

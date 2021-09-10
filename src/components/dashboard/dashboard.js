@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import BootcampList from '../bootcamps/bootcampList';
 import codingpic from '../bootcamps/images/codingpic.png';
 
+
 class Dashboard extends Component {
     render() {
         return(
@@ -13,7 +14,6 @@ class Dashboard extends Component {
                         className= "codingpic"
                         alt="pic of empty closing tag"
                     />
-                        {/* <BootcampList /> */}
                     <div className="col s12 m5 offset-m1"></div>
                 </div>
             </div>  

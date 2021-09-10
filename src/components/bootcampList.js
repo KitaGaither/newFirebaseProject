@@ -3,9 +3,9 @@ import { db } from '../components/bootcamps/config/firebase';
 
 
 const bootcamps = [
-  {name: 'bootstrap'} //change this back to bootstrap
+  {name: 'bootcamps'} //change this back to bootstrap
 ]
-class CourseOfferings extends Component {
+class BootcampList extends Component {
   state = { 
     bootcamps: null
   };
@@ -27,25 +27,18 @@ class CourseOfferings extends Component {
     render() {
     return (
       <div className="courseOfferings">
-        <h1>Bootcamp Courses</h1>
         {
           this.state.bootcamps &&
           this.state.bootcamps.map( bootcamp => {
             return (
-              <div>
-                <p>{bootcamp.indexOf[3]}</p>
-                {/* <p>{bootcamp.id}</p>
-                <p>{bootcamp.name}</p>
-                <p>b{bootcamp.description}</p>
-                <p>{bootcamp.length}</p>
+                <div className="card z-depth-0 bootcamp-summary">
+                <div className="card-content gray-text text-darken-3">
+                {/* <p>{bootcamps.bootcamps}</p> */}
+                <h5>{bootcamp.name}</h5>
                 <p>{bootcamp.description}</p>
-
-
                 <p>Length of course: {bootcamp.length}</p>
-                <p>Price of course: {bootcamp.price}</p> */}
-
-                
-
+                <p>Price of course: {bootcamp.price}</p>
+              </div>
               </div>
             )
           })
@@ -55,4 +48,4 @@ class CourseOfferings extends Component {
   }
 }
 
-export default CourseOfferings;
+export default BootcampList;

@@ -7,11 +7,11 @@ const SignedInLinks = () => {
         <ul className="right">
             
             <li>
-                <NavLink to='/bootcampdetails'>Bootcamp Details</NavLink>
+                <NavLink to='/currentbootcamps/:id'>Current Bootcamps</NavLink>
             </li>
 
             <li>
-                <NavLink to='/bootcamplist'>Bootcamp List</NavLink>
+                <NavLink to='/create'>Create Bootcamp</NavLink>
             </li>
 
             <li>
