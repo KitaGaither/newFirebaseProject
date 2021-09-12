@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import BootcampList from '../bootcamps/bootcampList';
-import codingpic from '../bootcamps/images/codingpic.png';
+import codingpic from '../images/codingpic.png';
 
 
 class Dashboard extends Component {

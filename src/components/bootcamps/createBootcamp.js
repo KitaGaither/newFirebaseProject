@@ -49,7 +49,7 @@ class CreateBootcamp extends Component {
                     </div>
 
                     <div className="input-field">
-                        <button className="btn blue lighten1 z-depth-0">Submit</button>
+                        <button className="btn blue lighten1 z-depth-0" onClick={this.handleSubmit}>Submit</button>
                     </div>
 
                 </form>

@@ -7,15 +7,15 @@ const SignedInLinks = () => {
         <ul className="right">
             
             <li>
-                <NavLink to='/currentbootcamps/:id'>Current Bootcamps</NavLink>
+                <NavLink to='/bootcamps/'>Bootcamps</NavLink>
             </li>
 
             <li>
-                <NavLink to='/create'>Create Bootcamp</NavLink>
+                <NavLink to='/createbootcamp/'>Create Bootcamp</NavLink>
             </li>
 
             <li>
-                <NavLink to='/' className='btn btn-floating blue lighten-1'>LG</NavLink>
+                <NavLink to='/' className='btn btn-floating blue lighten-3'>LG</NavLink>
             </li>
         </ul>
     )

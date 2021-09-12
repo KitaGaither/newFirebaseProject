@@ -5,7 +5,7 @@ import SignedInLinks from './signedInLinks';
 
 const Navbar = () => {
     return (
-        <nav className="nav-wrapper purple darken-3">
+        <nav className="nav-wrapper deep purple darken-4 darken-3">
             <div className="container">
                 <Link to='/' className="brand-logo">MERN-Stack Academy</Link>
                 <SignedInLinks />
