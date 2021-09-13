@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { db } from '../config/firebase';
+//import BootcampDetails from './bootcampDetails';
 
 
 const bootcamps = [
@@ -28,7 +29,6 @@ class Bootcamps extends Component {
           this.state.bootcamps.map( bootcamp => {
             return (
             
-              //function onClickHandler() {}
               <div onClick={ ()=>{window.location.href="/bootcamps/bootcampdetails/"} } class="container col s12 m6">
                 <div className="card z-depth-0 blue lighten-3 bootcamp-summary">
                 <div className="card-content white-text text-darken-3">
