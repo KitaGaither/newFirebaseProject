@@ -10,6 +10,18 @@ class Bootcamp extends Component {
   state = { 
     bootcamps: null
   };
+
+  handleBootcampDetailsChange(id) {
+    // each bootcamp card will have it's own piece of state
+    if(this.state[id] !== undefined){
+      // set previous state to opposite of itself, if false set to true and vice versa
+      this.setState( { ...this.state, [id]: !this.state[id]});
+    }else{
+      // this is the first time we are attempting to interact with a particular bootcamp
+      this.setState({...this.state, [id]: true});
+    }
+  }
+
   componentDidMount(){
     //console.log('mounted')
     db.collection('bootcamps')
@@ -52,3 +64,15 @@ class Bootcamp extends Component {
 }
 
 export default Bootcamp;
+
+/* GENERAL COMMENTS
+*
+* I would recommend breaking this up into two components. First, you have the main bootcamp dashboard that renders all bootcamps.
+* This bootcamp component would then represent only ONE bootcamp. You would store the state of all bootcamp components in the "main bootcamp component"
+*
+* You also need a new ShowBootcamp route/component that shows details of component. I've included an example of how to use the react-router-dom Link element.
+* You will use this Link element to show details using page. You already were on the right path, now these links will trigger line 23 in app JS
+*
+* Always use the Link component instead of window.location when using react-router-dom
+*
+* */
