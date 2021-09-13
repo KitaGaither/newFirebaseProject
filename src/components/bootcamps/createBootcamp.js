@@ -10,13 +10,13 @@ class CreateBootcamp extends Component {
         }
         handleChange = (e) => {
             this.setState({
-                [e.target.id]: e.target.value
+              [e.target.id]: e.target.value
             })
-        }
-        handleSubmit = (e) => {
+          }
+          handleSubmit = (e) => {
             e.preventDefault();
             console.log(this.state);
-        }
+          }
         render() {
         return (
             <div className="container">
@@ -49,7 +49,7 @@ class CreateBootcamp extends Component {
                     </div>
 
                     <div className="input-field">
-                        <button className="btn blue lighten1 z-depth-0" onClick={this.handleSubmit}>Submit</button>
+                        <button className="btn blue lighten1 z-depth-0">Submit</button>
                     </div>
 
                 </form>

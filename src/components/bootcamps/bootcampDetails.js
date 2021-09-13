@@ -4,7 +4,7 @@ import { db } from '../config/firebase';
 
 
 const bootcamps = [
-  {name: 'bootcamps'} //change this back to bootstrap
+  {name: 'bootcamps'} 
 ]
 class BootcampDetails extends Component {
   state = { 
@@ -50,13 +50,5 @@ class BootcampDetails extends Component {
     );
   }
 }
-
-// export class CreateABootcamp extends Component {
-//     render() {
-//         return(
-//             <CreateBootcamp />
-//         );
-//     }      
-// }
 
 export default BootcampDetails;

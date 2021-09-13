@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { db } from '../config/firebase';
-//import BootcampDetails from './bootcampDetails';
 
 
 const bootcamps = [
   {name: 'bootcamps'}
 ]
-class Bootcamps extends Component {
+class Bootcamp extends Component {
   state = { 
     bootcamps: null
   };
@@ -16,7 +15,7 @@ class Bootcamps extends Component {
     .get()
     .then( snapshot => {
       const bootcamps = snapshot.docs.map( doc => doc.data());
-      this.setState({ bootcamps: bootcamps })
+      this.setState({ bootcamps: bootcamps });
       //console.log(snapshot)
     })
     .catch( error => console.log(error))
@@ -28,8 +27,8 @@ class Bootcamps extends Component {
           this.state.bootcamps &&
           this.state.bootcamps.map( bootcamp => {
             return (
-            
-              <div onClick={ ()=>{window.location.href="/bootcamps/bootcampdetails/"} } class="container col s12 m6">
+              
+              <div onClick={ ()=>{window.location.href="/bootcamps/bootcampdetails"} } class="container col s12 m6">
                 <div className="card z-depth-0 blue lighten-3 bootcamp-summary">
                 <div className="card-content white-text text-darken-3">
                 {/* <p>{bootcamps.bootcamps}</p> */}
@@ -41,12 +40,14 @@ class Bootcamps extends Component {
               </div>
               </div>
               </div>
+              
             )
           })
         }
       </div>
+      
     );
   }
 }
 
-export default Bootcamps;
+export default Bootcamp;
