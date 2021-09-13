@@ -12,9 +12,7 @@ class Bootcamp extends Component {
   };
 
   handleBootcampDetailsChange(id) {
-    // set boolean based on input field name (will be bootcamp id)
     // each bootcamp card will have it's own piece of state
-    // you can also id of a bootcamp in place of name
     if(this.state[id] !== undefined){
       // set previous state to opposite of itself, if false set to true and vice versa
       this.setState( { ...this.state, [id]: !this.state[id]});
