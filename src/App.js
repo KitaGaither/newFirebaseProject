@@ -5,10 +5,10 @@ import Dashboard from './components/dashboard/dashboard';
 import Bootcamp from './components/bootcamps/bootcamp';
 import CreateBootcamp from './components/bootcamps/createBootcamp';
 import BootcampDetails from './components/bootcamps/bootcampDetails';
-// import BootstrapBootcamp from './components/bootcamps/bootstrapBootcamp';
-// import ReactBootcamp from './components/bootcamps/reactBootcamp';
-// import ReactNativeBootcamp from './components/bootcamps/reactNativeBootcamp';
-// import NodeBootcamp from './components/bootcamps/nodeBootcamp';
+import BootstrapBootcamp from './components/bootcamps/bootstrapBootcamp';
+import ReactBootcamp from './components/bootcamps/reactBootcamp';
+import ReactNativeBootcamp from './components/bootcamps/reactNativeBootcamp';
+import NodeBootcamp from './components/bootcamps/nodeBootcamp';
 
 class App extends Component {
     render() {
@@ -20,11 +20,12 @@ class App extends Component {
                 <Route exact path='/' component={Dashboard} />
                 <Route path='/bootcamp' component={Bootcamp} />
                 <Route path='/createbootcamp' component={CreateBootcamp} />
+                
+                {/* <Route path='/bootcamps/1' component={BootstrapBootcamp} />
+                <Route exact path='/bootcamp/2' component={ReactBootcamp} />
+                <Route excat path='/bootcamp/3' component={ReactNativeBootcamp} />
+                <Route exact path='/bootcamp/4' component={NodeBootcamp} /> */}
                 <Route path='/bootcamps/:id' component={BootcampDetails} />
-                {/* <Route path='/bootcamp/:id' component={BootstrapBootcamp} />
-                <Route path='/bootcamp/:id' component={ReactBootcamp} />
-                <Route path='/bootcamp/:id' component={ReactNativeBootcamp} />
-                <Route path='/bootcamp/:id' component={NodeBootcamp} /> */}
               </Switch>
             </div>
           </BrowserRouter>

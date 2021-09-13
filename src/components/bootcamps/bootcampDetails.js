@@ -7,8 +7,17 @@ const bootcamps = [
   {name: 'bootcamps'} 
 ]
 class BootcampDetails extends Component {
+  constructor(props) {
+    super(props);
+    //debugger
+    this.state = {
+      bootcampId: props.match.params.id,
+      bootcamps: null
+    }
+  }
   state = { 
     bootcamps: null
+  
   };
   componentDidMount(){
     console.log('mounted')
@@ -20,31 +29,34 @@ class BootcampDetails extends Component {
         const data = doc.data()
         bootcamps.push(data)
       })
-      this.setState({ bootcamps: bootcamps })
+      const bootcamp = bootcamps.find(bootcamp => String(bootcamp.id) === this.state.bootcampId)
+
+      this.setState({ bootcamp, bootcamps: bootcamps })
+      //debugger
       //console.log(snapshot)
     })
     .catch( error => console.log(error))
   }
-    render() {
+  render() {
     return (
       <div className="courseOfferings">
         {
-          this.state.bootcamps &&
-          this.state.bootcamps.map( bootcamp => {
-            return (
+          // this.state.bootcamps &&
+          // this.state.bootcamps.map( bootcamp => {
+             this.state.bootcamp && (
               <div class="container col s12 m6">
                 <div className="card z-depth-0 blue lighten-3 bootcamp-summary">
                 <div className="card-content white-text text-darken-3">
                 {/* <p>{bootcamps.bootcamps}</p> */}
-                <h5>{bootcamp.name}</h5>
-                <p>{bootcamp.description}</p>
-                <p>Length of course: {bootcamp.length}</p>
-                <p>Price of course: {bootcamp.price}</p>
+                <h5>{this.state.bootcamp.name}</h5>
+                <p>{this.state.bootcamp.description}</p>
+                <p>Length of course: {this.state.bootcamp.length}</p>
+                <p>Price of course: {this.state.bootcamp.price}</p>
               </div>
               </div>
               </div>         
             )
-          })
+          //})
         }
       </div>
     );
